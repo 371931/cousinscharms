@@ -34,3 +34,27 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Resolving Git Push Error
+
+If you encounter a permission error when pushing to the repository, follow these steps:
+
+1. Check your remote URL:
+   ```sh
+   git remote -v
+   ```
+
+2. If the remote URL is correct and you still face issues, try removing and re-adding the remote:
+   ```sh
+   git remote remove origin
+   git remote add origin https://github.com/371931/cousinscharms.git
+   ```
+
+3. Ensure you have the correct permissions to push to the repository. If you are not the owner, request access from the repository owner.
+
+4. If you have two-factor authentication enabled, use a personal access token instead of your password when prompted.
+
+5. Finally, try pushing your changes again:
+   ```sh
+   git push -u origin main
+   ```
